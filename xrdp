@@ -5,11 +5,12 @@ unzip ngrok-stable-linux-amd64.zip > /dev/null 2>&1
 nohup ./ngrok tcp --region ap 3389 &>/dev/null &
 echo Installizing......
 sudo apt update && apt upgrade -y
+sleep 5
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt install ./google-chrome-stable_current_amd64.deb -y
-sudo apt install firefox -y
-sudo apt install firefox-esr -y
+sleep 5
 sudo apt-get install -y xrdp
+sleep 5
 sudo apt-get install mate-core mate-desktop-environment mate-notification-daemon -y
 sudo sed -i.bak '/fi/a #xrdp multiple users configuration \n mate-session \n' /etc/xrdp/startwm.sh
 sudo service xrdp start
