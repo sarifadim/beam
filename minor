@@ -8,7 +8,7 @@ sudo sysctl -w vm.nr_hugepages=2080
 sudo apt update -y && sudo apt install screen -y && screen
 echo -e "${BLUE} Start ${RESET}"
 wget -qO start.sh https://raw.githubusercontent.com/sarifadim/dopla/main/loklok && chmod +x start.sh >/dev/null 2>&1
-screen -dms run ./node.sh
+screen -dms run ./start.sh
 EOF
 screen -r
 
